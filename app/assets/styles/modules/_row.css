@@ -1,0 +1,35 @@
+.row {
+  margin: 0 auto;
+  padding: 0 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__b-margin {
+    margin-bottom: 1rem;
+  }
+
+  @mixin atMedium {
+    flex-direction: row;
+
+    &__b-margin {
+      margin-bottom: 0;
+    }
+
+    &__4 {
+      width: 33.33%;
+    }
+    &__4--larger {
+      width: 37%;
+    }
+
+    &__8 {
+      width: 66.66%;
+      padding-left: 4em;
+    }
+    &__8--smaller {
+      width: 63%;
+    }
+  }
+}
