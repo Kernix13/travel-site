@@ -1,6 +1,6 @@
 .row {
   margin: 0 auto;
-  padding: 0 1.25em;
+  padding: 0 0.375em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,10 @@
 
   &__b-margin {
     margin-bottom: 1rem;
+  }
+
+  @mixin atSmall {
+    padding: 0 1.125em;
   }
 
   @mixin atMedium {
@@ -22,6 +26,13 @@
     }
     &__4--larger {
       width: 37%;
+    }
+
+    &__6 {
+      width: 50%;
+    }
+    &__6 + &__6 {
+      margin-left: 6.25em;
     }
 
     &__8 {
