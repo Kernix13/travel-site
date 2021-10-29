@@ -1,0 +1,73 @@
+.testimonial {
+  padding: 0 0 0.0625rem;
+  margin-bottom: 98px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__col + &__col {
+    margin-top: 6em;
+  }
+
+  @mixin atMedium {
+    padding: 0 1.875rem 0.0625rem 1.875rem;
+    margin-bottom: 0;
+
+    &__col + &__col {
+      margin-top: 6em;
+    }
+  }
+
+  @mixin atLarge {
+    flex-direction: row;
+
+    &__col {
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 33.33%;
+      flex: 1 1 auto;
+    }
+    &__col + &__col {
+      margin-left: 2.875em;
+      margin-top: 0;
+    }
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &__col {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__photo {
+    overflow: hidden;
+    border-radius: 80px;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto -80px auto;
+    position: relative;
+    top: -80px;
+    border: 6px solid rgba(255, 255, 255, 0.8);
+  }
+
+  &__title {
+    color: $mainBlue;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: $mainOrange;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: 0.25rem 0 1rem;
+  }
+
+  &__text {
+    padding: 1em 1em 0;
+  }
+}
