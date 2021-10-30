@@ -1,0 +1,38 @@
+.site-header {
+  padding: 0.625em 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @mixin atMedium {
+    background-color: rgba(47, 85, 114, 0.3);
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $mainBlue;
+    padding: 0.75em 1.75em;
+
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0);
+      padding: 1.5em 3.25em;
+    }
+  }
+
+  &__menu-icon {
+    width: 1.25em;
+    height: 1.25em;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    @mixin atMedium {
+      display: none;
+    }
+  }
+}

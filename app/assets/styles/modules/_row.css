@@ -55,3 +55,14 @@
     }
   }
 }
+
+/* header row flex containers */
+.row--header-nav {
+  display: none;
+
+  @mixin atMedium {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

@@ -1,18 +1,24 @@
 .large-hero {
   border-bottom: 10px solid $mainBlue;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
 
   &__image {
-    display: block;
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+      display: block;
+    }
   }
-  
+
   &__text-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
+
     text-align: center;
+    padding-top: 3.75em;
   }
 
   &__title {
@@ -41,7 +47,7 @@
     font-weight: 100;
     color: #fff;
     font-size: 1.1rem;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     max-width: 30rem;
     margin-right: auto;
     margin-left: auto;
@@ -49,8 +55,5 @@
     @mixin atSmall {
       font-size: 1.875rem;
     }
-  
   }
-
 }
-
