@@ -11,6 +11,11 @@
 
   &__item {
     margin-right: 1em;
+    padding-top: 1em;
+
+    @mixin atMedium {
+      padding-top: 0;
+    }
   }
 
   &__link {
@@ -18,5 +23,12 @@
 
     color: #fff;
     font-weight: 300;
+    padding: 0.25em 0.5em;
+    background-color: rgba(47, 85, 114, 0.55);
+
+    @mixin atMedium {
+      background-color: transparent;
+      paddin: 1em 0;
+    }
   }
 }
